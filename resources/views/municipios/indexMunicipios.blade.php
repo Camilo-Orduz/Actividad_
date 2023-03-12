@@ -28,7 +28,7 @@
                     <td>{{ $municipio -> nombre_municipio }}</td>
                     <td>{{ $municipio -> departamento_id}}</td>
                     <td>
-                        <form action="#" method="POST">
+                        <form action="{{ route('municipios_eliminar', $municipio->id_municipios) }}" method="POST">
                             @method('DELETE')
                             @csrf
                             <!--<a href="#" class="btn btn-sm btn-info">Detalles</a>-->

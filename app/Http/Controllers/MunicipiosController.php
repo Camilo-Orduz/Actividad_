@@ -33,4 +33,9 @@ class MunicipiosController extends Controller
         Municipio::find($id)->update($request->all());
         return redirect()->route('inicioMunicipios');
     }
+
+    public function eliminarM($id){
+        Municipio::find($id)->delete();
+        return redirect()->route('inicioMunicipios');
+    }
 }

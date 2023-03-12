@@ -67,3 +67,4 @@ Route::get('/crearmunicipio', [MunicipiosController::class, 'crearM']);
 Route::post('/iniciomunicipios', [MunicipiosController::class, 'storeM'])->name('municipios_crear');
 Route::get('/iniciomunicipios/{id}/edit', [MunicipiosController::class, 'editarM'])->name('municipios_editar');
 Route::put('/iniciomunicipios/{id}/edit/update', [MunicipiosController::class, 'updateM'])->name('municipios_actualizar');
+Route::delete('/iniciomunicipios/{id}', [MunicipiosController::class, 'eliminarM'])->name('municipios_eliminar');
