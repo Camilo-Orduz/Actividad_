@@ -9,7 +9,8 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"></a>
+        <a class="navbar-brand" href="#">{{ Auth::user()->name}}</a>
+        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,8 +25,17 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('inicioMunicipios') }}">Municipios</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" onclick="document.getElementById('form-chao').submit()">Salir</a>
+            </li>
             </ul>
         </div>
     </nav>
 </body>
 </html>
+
+<form action="{{ route('logout') }}" method="post" id="form-chao">
+    @csrf
+
+</form>
+
