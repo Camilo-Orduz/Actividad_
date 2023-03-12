@@ -34,6 +34,9 @@
             </ul>
         </div>
     </nav>
+    <div>
+    <a class="nav-link" href="{{ route('crear_pais') }}"><button type="button" class="btn btn-success">Crear País</button></a>
+    </div>
     <div class='container'>
         <table>
             <thead>

@@ -35,11 +35,14 @@
             </ul>
         </div>
     </nav>
+    <div>
+    <a class="nav-link" href="{{ route('crear_departamento') }}"><button type="button" class="btn btn-success">Crear Departamento</button></a>
+    </div>
     <div class='container'>
         <table>
             <thead>
                 <tr>
-                    <td>id_departamentos</td>
+                    <td>Id_departamentos</td>
                     <td>Nombre del Departamento</td>
                     <td>País</td>
                     <td>Acciones</td>

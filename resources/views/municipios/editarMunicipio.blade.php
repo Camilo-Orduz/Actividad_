@@ -18,7 +18,7 @@
             <input type="text" id="nombre" name="nombre_municipio" value="{{$municipio->nombre_municipio}}"><br>
             <label for="">Departamento: </label>
             <select name="departamento_id" id="inputDepartamento" required>
-                <option value="">{{$municipio->id_municipios}}</option>
+                <option value="">{{ $municipio->departamento_id}}</option>
                 @foreach ($departamentos as $departamento)
                     <option value="{{ $departamento['id_departamentos']}}">{{$departamento['nombre_departamento']}}</option>
                 @endforeach

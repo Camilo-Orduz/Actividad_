@@ -11,7 +11,7 @@
     <title>Inicio municipios</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">{{ Auth::user()->name}}</a>
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,11 +34,14 @@
             </ul>
         </div>
     </nav>
+    <div>
+    <a class="nav-link" href="{{ route('crear_municipio') }}"><button type="button" class="btn btn-success">Crear Municipio</button></a>
+    </div>
     <div class='container'>
         <table>
             <thead>
                 <tr>
-                    <td>id_municipios</td>
+                    <td>Id_municipios</td>
                     <td>Nombre del Municipio</td>
                     <td>Departamento</td>
                     <td>Acciones</td>
