@@ -32,7 +32,7 @@
                             @method('DELETE')
                             @csrf
                             <!--<a href="#" class="btn btn-sm btn-info">Detalles</a>-->
-                            <a href="#" class="btn btn-sm btn-warning">Editar</a>
+                            <a href="{{ route('municipios_editar', $municipio -> id_municipios) }}" class="btn btn-sm btn-warning">Editar</a>
                             <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
                         </form>
                     </td>

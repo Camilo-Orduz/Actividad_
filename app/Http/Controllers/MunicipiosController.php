@@ -22,4 +22,15 @@ class MunicipiosController extends Controller
         Municipio::create($request->all());
         return redirect()->route('inicioMunicipios');
     }
+
+    public function editarM ($id){
+        $municipio = Municipio::find($id);
+        $departamentos=Departamento::all();
+        return view('municipios.editarMunicipio', compact('municipio'), compact('departamentos'));
+    }
+
+    public function updateM (Request $request, $id){
+        Municipio::find($id)->update($request->all());
+        return redirect()->route('inicioMunicipios');
+    }
 }
