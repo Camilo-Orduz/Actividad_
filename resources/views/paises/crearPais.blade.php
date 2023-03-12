@@ -15,7 +15,7 @@
         @csrf
         <div style="margin-left:42%">
             <label for="">Nombre del País: </label>
-            <input type="text" id="nombre" name="nombre_pais">
+            <input type="text" id="nombre" name="nombre_pais" required>
             <button type="submit">Crear país</button>
         </div>
         
