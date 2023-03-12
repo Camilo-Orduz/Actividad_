@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaisesController;
 use App\Http\Controllers\DepartamentosController;
+use App\Http\Controllers\MunicipiosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,3 +58,10 @@ Route::post('/iniciodepartamentos', [DepartamentosController::class, 'storeD'])-
 Route::delete('/iniciodepartamentos/{id}', [DepartamentosController::class, 'eliminarD'])->name('departamentos_eliminar');
 Route::get('/iniciodepartamentos/{id}/edit', [DepartamentosController::class, 'editarD'])->name('departamentos_editar');
 Route::put('/iniciodepartamentos/{id}/edit/update', [DepartamentosController::class, 'updateD'])->name('departamentos_actualizar');
+
+
+
+
+Route::get('/iniciomunicipios', [MunicipiosController::class, 'indexM'])->name('inicioMunicipios');
+Route::get('/crearmunicipio', [MunicipiosController::class, 'crearM']);
+Route::post('/iniciomunicipios', [MunicipiosController::class, 'storeM'])->name('municipios_crear');
