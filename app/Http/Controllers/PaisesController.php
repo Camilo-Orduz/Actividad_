@@ -16,4 +16,14 @@ class PaisesController extends Controller
     public function crearP(){
         return view('paises.crearPais');
     }
+
+    public function storeP(Request $request){
+        Pais::create($request->all());
+        return redirect()->route('iniciopaises');
+    }
+
+    public function eliminarP($id){
+        Pais::find($id)->delete();
+        return redirect()->route('iniciopaises');
+    }
 }

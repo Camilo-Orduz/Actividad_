@@ -40,6 +40,7 @@ Route::get('sin-sesion',function(){
     return "esta vista es publica";
 });
 
-Route::get('/iniciopaises', [PaisesController::class, 'indexP']);
-
+Route::get('/iniciopaises', [PaisesController::class, 'indexP'])->name('iniciopaises');
 Route::get('/crearpais', [PaisesController::class, 'crearP']);
+Route::post('/iniciopaises', [PaisesController::class, 'storeP'])->name('paises.crear');
+Route::delete('/iniciopaises/{id}', [PaisesController::class, 'eliminarP'])->name('paises.eliminar');
