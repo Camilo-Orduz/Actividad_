@@ -45,10 +45,15 @@ Route::get('/iniciopaises', [PaisesController::class, 'indexP'])->name('iniciopa
 Route::get('/crearpais', [PaisesController::class, 'crearP']);
 Route::post('/iniciopaises', [PaisesController::class, 'storeP'])->name('paises_crear');
 Route::delete('/iniciopaises/{id}', [PaisesController::class, 'eliminarP'])->name('paises_eliminar');
-
 Route::get('/iniciopaises/{id}/edit', [PaisesController::class, 'editarP'])->name('paises_editar');
 Route::put('/iniciopaises/{id}/edit/update', [PaisesController::class, 'updateP'])->name('paises_actualizar');
 
+
+
+
 Route::get('/iniciodepartamentos', [DepartamentosController::class, 'indexD'])->name('inicioDep');
 Route::get('/creardepartamento', [DepartamentosController::class, 'crearD']);
-Route::post('/iniciopaises', [DepartamentosController::class, 'storeP'])->name('departamentos_crear');
+Route::post('/iniciodepartamentos', [DepartamentosController::class, 'storeD'])->name('departamentos_crear');
+
+Route::get('/iniciodepartamentos/{id}/edit', [DepartamentosController::class, 'editarD'])->name('departamentos_editar');
+Route::put('/iniciodepartamentos/{id}/edit/update', [DepartamentosController::class, 'updateD'])->name('departamentos_actualizar');

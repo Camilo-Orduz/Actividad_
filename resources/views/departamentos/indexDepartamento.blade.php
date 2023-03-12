@@ -26,13 +26,13 @@
                 <tr>
                     <td>{{ $departamento -> id_departamentos }}</td>
                     <td>{{ $departamento -> nombre_departamento }}</td>
-                    <td>{{ $departamento -> nombre_pais}}</td>
+                    <td>{{ $departamento -> pais_id}}</td>
                     <td>
                         <form action="#" method="POST">
                             @method('DELETE')
                             @csrf
                             <!--<a href="#" class="btn btn-sm btn-info">Detalles</a>-->
-                            <a href="#" class="btn btn-sm btn-warning">Editar</a>
+                            <a href="{{ route('departamentos_editar', $departamento -> id_departamentos) }}" class="btn btn-sm btn-warning">Editar</a>
                             <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
                         </form>
                     </td>

@@ -18,8 +18,19 @@ class DepartamentosController extends Controller
         return view('departamentos.crearDepartamento', compact('paises'));
     }
 
-    public function storeP(Request $request){
+    public function storeD(Request $request){
         Departamento::create($request->all());
+        return redirect()->route('inicioDep');
+    }
+
+    public function editarD ($id){
+        $departamento = Departamento::find($id);
+        $paises=Pais::all();
+        return view('departamentos.editarDepartamento', compact('departamento'), compact('paises'));
+    }
+
+    public function updateD (Request $request, $id){
+        Departamento::find($id)->update($request->all());
         return redirect()->route('inicioDep');
     }
 }
