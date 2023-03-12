@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaisesController;
+use App\Http\Controllers\DepartamentosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,3 +48,7 @@ Route::delete('/iniciopaises/{id}', [PaisesController::class, 'eliminarP'])->nam
 
 Route::get('/iniciopaises/{id}/edit', [PaisesController::class, 'editarP'])->name('paises_editar');
 Route::put('/iniciopaises/{id}/edit/update', [PaisesController::class, 'updateP'])->name('paises_actualizar');
+
+Route::get('/iniciodepartamentos', [DepartamentosController::class, 'indexD'])->name('inicioDep');
+Route::get('/creardepartamento', [DepartamentosController::class, 'crearD']);
+Route::post('/iniciopaises', [DepartamentosController::class, 'storeP'])->name('departamentos_crear');

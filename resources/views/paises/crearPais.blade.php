@@ -11,7 +11,7 @@
 <body>
     <h1>Crear País</h1>
     <br>
-    <form method="POST" action="{{ route('paises.crear') }}" >
+    <form method="POST" action="{{ route('paises_crear') }}" >
         @csrf
         <div style="margin-left:42%">
             <label for="">Nombre del País: </label>
