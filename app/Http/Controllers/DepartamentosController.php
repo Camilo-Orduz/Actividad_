@@ -33,4 +33,9 @@ class DepartamentosController extends Controller
         Departamento::find($id)->update($request->all());
         return redirect()->route('inicioDep');
     }
+
+    public function eliminarD($id){
+        Departamento::find($id)->delete();
+        return redirect()->route('inicioDep');
+    }
 }

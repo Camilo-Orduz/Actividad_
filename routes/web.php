@@ -54,6 +54,6 @@ Route::put('/iniciopaises/{id}/edit/update', [PaisesController::class, 'updateP'
 Route::get('/iniciodepartamentos', [DepartamentosController::class, 'indexD'])->name('inicioDep');
 Route::get('/creardepartamento', [DepartamentosController::class, 'crearD']);
 Route::post('/iniciodepartamentos', [DepartamentosController::class, 'storeD'])->name('departamentos_crear');
-
+Route::delete('/iniciodepartamentos/{id}', [DepartamentosController::class, 'eliminarD'])->name('departamentos_eliminar');
 Route::get('/iniciodepartamentos/{id}/edit', [DepartamentosController::class, 'editarD'])->name('departamentos_editar');
 Route::put('/iniciodepartamentos/{id}/edit/update', [DepartamentosController::class, 'updateD'])->name('departamentos_actualizar');
