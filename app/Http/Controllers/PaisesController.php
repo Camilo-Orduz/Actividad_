@@ -26,4 +26,14 @@ class PaisesController extends Controller
         Pais::find($id)->delete();
         return redirect()->route('iniciopaises');
     }
+
+    public function editarP ($id){
+        $pais = Pais::find($id);
+        return view('paises.editarPais', compact('pais'));
+    }
+
+    public function updateP (Request $request, $id){
+        Pais::find($id)->update($request->all());
+        return redirect()->route('iniciopaises');
+    }
 }

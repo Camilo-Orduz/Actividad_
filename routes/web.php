@@ -42,5 +42,8 @@ Route::get('sin-sesion',function(){
 
 Route::get('/iniciopaises', [PaisesController::class, 'indexP'])->name('iniciopaises');
 Route::get('/crearpais', [PaisesController::class, 'crearP']);
-Route::post('/iniciopaises', [PaisesController::class, 'storeP'])->name('paises.crear');
-Route::delete('/iniciopaises/{id}', [PaisesController::class, 'eliminarP'])->name('paises.eliminar');
+Route::post('/iniciopaises', [PaisesController::class, 'storeP'])->name('paises_crear');
+Route::delete('/iniciopaises/{id}', [PaisesController::class, 'eliminarP'])->name('paises_eliminar');
+
+Route::get('/iniciopaises/{id}/edit', [PaisesController::class, 'editarP'])->name('paises_editar');
+Route::put('/iniciopaises/{id}/edit/update', [PaisesController::class, 'updateP'])->name('paises_actualizar');

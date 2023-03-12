@@ -26,11 +26,11 @@
                     <td>{{ $pais -> id_paises }}</td>
                     <td>{{ $pais -> nombre_pais }}</td>
                     <td>
-                        <form action="{{ route('paises.eliminar', $pais->id_paises) }}" method="POST">
+                        <form action="{{ route('paises_eliminar', $pais->id_paises) }}" method="POST">
                             @method('DELETE')
                             @csrf
-                            <a href="#" class="btn btn-sm btn-info">Detalles</a>
-                            <a href="#" class="btn btn-sm btn-warning">Editar</a>
+                            <!--<a href="#" class="btn btn-sm btn-info">Detalles</a>-->
+                            <a href="{{ route('paises_editar', $pais->id_paises) }}" class="btn btn-sm btn-warning">Editar</a>
                             <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
                         </form>
                     </td>
