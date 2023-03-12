@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PaisesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +39,7 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
 Route::get('sin-sesion',function(){
     return "esta vista es publica";
 });
+
+Route::get('/iniciopaises', [PaisesController::class, 'indexP']);
+
+Route::get('/crearpais', [PaisesController::class, 'crearP']);
