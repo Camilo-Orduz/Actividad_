@@ -1,3 +1,15 @@
+Este proyecto consiste en una aplicación web que nos permita generar las gestión CRUD de las siguientes entidades.
+
+- Países
+- Departamentos
+- Municipios
+
+También, implementa una autenticación básica para que solamente usuarios autorizados puedan manipular la base de datos.
+
+El modelo relacional de la base de datos es el siguiente:
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
