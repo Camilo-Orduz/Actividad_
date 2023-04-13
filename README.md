@@ -8,7 +8,19 @@ También, implementa una autenticación básica para que solamente usuarios auto
 
 El modelo relacional de la base de datos es el siguiente:
 
+![modelorelacional.png](https://github.com/Camilo-Orduz/Actividad_/blob/main/modeloRelacional.png)
 
+Funcionalidades <br>
+1-) un usuario registrado puede registrar (crud) un país<br>
+2-) un usuario registrado puede registrar (crud) un departamento asociado a un país<br>
+3-) un usuario registrado puede registrar (crud) un municipio asociado a un departamento<br>
+4-) cualquier usuario puede registrarse en el sistema<br>
+5-) un usuario registrado puede iniciar sesión.<br>
+<br>
+Seguridad<br>
+1-) los usuarios que no estén autenticados no podrán realizar ninguna modificación a la información de países, departamentos, municipios.
+
+<br><br><br><br><br><br>
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
